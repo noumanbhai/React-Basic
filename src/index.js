@@ -19,25 +19,28 @@ const Books = [
     img: "https://images-na.ssl-images-amazon.com/images/I/51Mx2wNFgKL._SX379_BO1,204,203,200_.jpg",
   },
 ];
-const names = ["nouman", "ehsan", "shoaib"];
-const newNames = names.map((name) => {
-  return <p>{name}</p>;
-});
+
 const Booklist = () => {
-  return <section className="booklist">{newNames}</section>;
+  return (
+    <section className="booklist">
+      {Books.map((book) => {
+        return <Book book={book}></Book>;
+      })}
+    </section>
+  );
 };
 
 const Book = (props) => {
   // same work
   // const Book = (props) => {
-  const { title, auth, work, age, img } = props;
+  const { title, auth, work, age, img } = props.book;
   return (
     <article className="book">
       <img src={img} alt="this image not found" />
-      <p>{props.title}</p>
-      <p>{props.auth}</p>
-      <p>{props.work}</p>
-      <p>{props.age}</p>
+      <p>{title}</p>
+      <p>{auth}</p>
+      <p>{work}</p>
+      <p>{age}</p>
     </article>
   );
 };
