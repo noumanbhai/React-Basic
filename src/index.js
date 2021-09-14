@@ -17,7 +17,6 @@ const secndBook = {
   age: 88,
   img: "https://images-na.ssl-images-amazon.com/images/I/51Mx2wNFgKL._SX379_BO1,204,203,200_.jpg",
 };
-
 const Booklist = () => {
   return (
     <section className="booklist">
@@ -27,7 +26,16 @@ const Booklist = () => {
         work={firstBook.work}
         age={firstBook.age}
         img={firstBook.img}
-      />
+      >
+        <p>
+          t is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English.
+        </p>
+      </Book>
+
       <Book
         title={secndBook.title}
         auth={secndBook.author}
@@ -40,7 +48,7 @@ const Booklist = () => {
   );
 };
 
-const Book = ({ title, auth, work, age, img }) => {
+const Book = ({ title, auth, work, age, img, children }) => {
   // same work
   // const Book = (props) => {
   // const { title, auth, work, age, img } = props;
@@ -51,6 +59,7 @@ const Book = ({ title, auth, work, age, img }) => {
       <p>{auth}</p>
       <p>{work}</p>
       <p>{age}</p>
+      <p>{children}</p>
     </article>
   );
 };
