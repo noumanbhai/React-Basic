@@ -17,27 +17,19 @@ const Booklist = () => {
 };
 
 const Book = () => {
+  const title = "This is a image title";
+  const author = "Nouman";
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img
+        className="image"
+        src="https://m.media-amazon.com/images/I/51rErkw+OyL.jpg"
+        alt=""
+      />
+      <p>{title}</p>
+      <p>{author}</p>
     </article>
   );
 };
-
-const Image = () => (
-  <img
-    className="image"
-    src="https://m.media-amazon.com/images/I/51rErkw+OyL.jpg"
-    alt=""
-  />
-);
-const Title = () => <p>This is a image title</p>;
-const Author = () => (
-  <a href="" style={{ color: "red" }}>
-    Nouman
-  </a>
-);
 
 ReeactDom.render(<Booklist />, document.getElementById("root"));
