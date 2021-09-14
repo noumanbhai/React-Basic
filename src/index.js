@@ -5,6 +5,7 @@ import "./style.css";
 
 const Books = [
   {
+    id: 1,
     title: "This is a image title",
     author: "Nouman",
     work: "Developer",
@@ -12,6 +13,7 @@ const Books = [
     img: "https://m.media-amazon.com/images/I/51rErkw+OyL.jpg",
   },
   {
+    id: 2,
     title: "This is a book 2 title",
     author: "Ehsan",
     work: "Programmer",
@@ -24,7 +26,7 @@ const Booklist = () => {
   return (
     <section className="booklist">
       {Books.map((book) => {
-        return <Book book={book}></Book>;
+        return <Book key={book.id} book={book}></Book>;
       })}
     </section>
   );
