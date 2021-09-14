@@ -25,14 +25,14 @@ const Booklist = () => {
         title={firstBook.title}
         auth={firstBook.author}
         work={firstBook.work}
-        ages={firstBook.age}
+        age={firstBook.age}
         img={firstBook.img}
       />
       <Book
         title={secndBook.title}
         auth={secndBook.author}
         work={secndBook.work}
-        ages={secndBook.age}
+        age={secndBook.age}
         img={secndBook.img}
       />
       {/* <Book title="book" page={22} /> */}
@@ -42,14 +42,14 @@ const Booklist = () => {
 
 const Book = (props) => {
   // console.log(props);
-
+  const { title, auth, work, age, img } = props;
   return (
     <article className="book">
-      <img src={props.img} alt="this image not found" />
-      <p>{props.title}</p>
-      <p>{props.auth}</p>
-      <p>{props.work}</p>
-      <p>{props.ages}</p>
+      <img src={img} alt="this image not found" />
+      <p>{title}</p>
+      <p>{auth}</p>
+      <p>{work}</p>
+      <p>{age}</p>
     </article>
   );
 };
