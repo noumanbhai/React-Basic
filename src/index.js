@@ -3,14 +3,25 @@ import ReeactDom from "react-dom";
 //   css
 import "./style.css";
 
-const title = "This is a image title";
-const author = "Nouman";
+const firstBook = {
+  title: "This is a image title",
+  author: "Nouman",
+  work: "Developer",
+  age: 55,
+  img: "https://m.media-amazon.com/images/I/51rErkw+OyL.jpg",
+};
 
 const Booklist = () => {
   return (
     <section className="booklist">
-      <Book title="book" />
-      <Book title="book" work="Developer" age={26} />
+      <Book
+        title={firstBook.title}
+        auth={firstBook.author}
+        work={firstBook.work}
+        ages={firstBook.age}
+        img={firstBook.img}
+      />
+      <Book title={firstBook.title} ages={firstBook.age} img={firstBook.imgs} />
       {/* <Book title="book" page={22} /> */}
     </section>
   );
@@ -21,15 +32,11 @@ const Book = (props) => {
 
   return (
     <article className="book">
-      <img
-        className="image"
-        src="https://m.media-amazon.com/images/I/51rErkw+OyL.jpg"
-        alt=""
-      />
-      <p>{title}</p>
-      <p>{author}</p>
+      <img src={props.img} alt="this image not found" />
+      <p>{props.title}</p>
+      <p>{props.auth}</p>
       <p>{props.work}</p>
-      <p>{props.age}</p>
+      <p>{props.ages}</p>
     </article>
   );
 };
