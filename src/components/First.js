@@ -1,14 +1,14 @@
-import React from 'react'
+// import React from 'react'
 
-// function First()
-// {
-//     return <h1>Nouman</h1>
-// }
+// // function First()
+// // {
+// //     return <h1>Nouman</h1>
+// // }
 
-// Arrow function
+// // Arrow function
 
- const First=()=>
-     <h1>Nouman</h1>
+//  const First=()=>
+//      <h1>Nouman</h1>
 
 
-export default First;
+// export default First;

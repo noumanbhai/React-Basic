@@ -4,7 +4,7 @@ import First from './components/First'
 function App() {
   return (
     <div className="App">
-      <First></First>
+      {/* <First></First> */}
     </div>
   );
 }
