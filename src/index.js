@@ -24,7 +24,7 @@ const Booklist = () => {
   return (
     <section className="booklist">
       {Books.map((book, index) => {
-        return <Book key={index} book={book}></Book>;
+        return <Book key={index} {...book}></Book>;
       })}
     </section>
   );
@@ -33,7 +33,7 @@ const Booklist = () => {
 const Book = (props) => {
   // same work
   // const Book = (props) => {
-  const { title, auth, work, age, img } = props.book;
+  const { title, auth, work, age, img } = props;
   return (
     <article className="book">
       <img src={img} alt="this image not found" />
