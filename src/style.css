@@ -1,0 +1,36 @@
+* {
+  margin: 0 px;
+  padding: 0 px;
+  box-sizing: border-box;
+}
+body {
+  background: blanchedalmond;
+}
+.booklist {
+  border: 2px solid orange;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+.image {
+  width: 169px;
+  height: 169px;
+}
+.book {
+  background: darkgray;
+  text-align: center;
+  margin: 27px;
+  padding: 23px;
+  border-radius: 58px;
+}
+.book p {
+  font-size: 30px;
+  text-underline-position: above;
+}
+
+@media screen and (min-width: 768px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

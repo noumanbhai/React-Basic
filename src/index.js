@@ -1,26 +1,43 @@
-import React from 'react';
-import ReeactDom from 'react-dom'
-  
-// function Name(){
-// return <p>This is my first code.</p>;
-// }
+import React from "react";
+import ReeactDom from "react-dom";
+//   css
+import "./style.css";
 
-const Name=()=>{
+const Booklist = () => {
+  return (
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+};
 
+const Book = () => {
+  return (
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
 
+const Image = () => (
+  <img
+    className="image"
+    src="https://m.media-amazon.com/images/I/51rErkw+OyL.jpg"
+    alt=""
+  />
+);
+const Title = () => <p>This is a image title</p>;
+const Author = () => (
+  <a href="" style={{ color: "red" }}>
+    Nouman
+  </a>
+);
 
-    
-    return (
-        <div>
-            <Naam/>
-            <Person/>
-    </div>
-    )}
-const Naam = () =><h3>Nouman</h3>;
-const Person=()=> 
-{
-   return <h4>I am a component</h4>
-}
-
-
-ReeactDom.render(<Name/>,document.getElementById('root'));
+ReeactDom.render(<Booklist />, document.getElementById("root"));
