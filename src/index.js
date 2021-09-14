@@ -40,9 +40,10 @@ const Booklist = () => {
   );
 };
 
-const Book = (props) => {
-  // console.log(props);
-  const { title, auth, work, age, img } = props;
+const Book = ({ title, auth, work, age, img }) => {
+  // same work
+  // const Book = (props) => {
+  // const { title, auth, work, age, img } = props;
   return (
     <article className="book">
       <img src={img} alt="this image not found" />
