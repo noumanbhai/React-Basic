@@ -3,22 +3,22 @@ import ReeactDom from "react-dom";
 //   css
 import "./style.css";
 
+const title = "This is a image title";
+const author = "Nouman";
+
 const Booklist = () => {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book title="book" />
+      <Book title="book" work="Developer" age={26} />
+      {/* <Book title="book" page={22} /> */}
     </section>
   );
 };
 
-const Book = () => {
-  const title = "This is a image title";
-  const author = "Nouman";
+const Book = (props) => {
+  // console.log(props);
+
   return (
     <article className="book">
       <img
@@ -28,6 +28,8 @@ const Book = () => {
       />
       <p>{title}</p>
       <p>{author}</p>
+      <p>{props.work}</p>
+      <p>{props.age}</p>
     </article>
   );
 };
