@@ -28,6 +28,12 @@ body {
   font-size: 30px;
   text-underline-position: above;
 }
+button {
+  width: 163px;
+  height: 34px;
+  color: red;
+  background-color: chartreuse;
+}
 
 @media screen and (min-width: 768px) {
   .booklist {
