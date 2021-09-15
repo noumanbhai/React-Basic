@@ -4,8 +4,9 @@ import ReeactDom from "react-dom";
 import "./style.css";
 import { data } from "./components/Books";
 import NBook from "./components/Book";
-
+import { name } from "./components/Name";
 const Booklist = () => {
+  console.log(name);
   return (
     <section className="booklist">
       {data.map((book, index) => {
